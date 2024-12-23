@@ -1,0 +1,33 @@
+/* MovieList.css */
+
+/* Container for the movie list */
+.movie-list {
+    display: grid;
+    gap: 1rem; /* Space between items */
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Styling for individual movie items */
+.movie-list-item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add hover effect for movie items */
+.movie-list-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .movie-list {
+        grid-template-columns: 1fr;
+    }
+}
